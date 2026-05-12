@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Mail, MapPin, Linkedin, Check, Send } from "lucide-react";
+import { Mail, MapPin, Check, Send } from "lucide-react";
 import { z } from "zod";
 import { SectionHeader } from "./SectionHeader";
 
@@ -26,6 +26,12 @@ export function Contact() {
       return;
     }
     setErrors({});
+
+    const mailtoLink = `mailto:jdthefreelancer1816@gmail.com?subject=${encodeURIComponent(form.subject)}&body=${encodeURIComponent(
+      `Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`
+    )}`;
+    window.location.href = mailtoLink;
+
     setSent(true);
     setTimeout(() => {
       setSent(false);
@@ -77,8 +83,7 @@ export function Contact() {
               </p>
 
               {[
-                { Icon: Mail, label: "Email", value: "hello@example.com" },
-                { Icon: Linkedin, label: "LinkedIn", value: "/in/yourname" },
+                { Icon: Mail, label: "Email", value: "jdthefreelancer1816@gmail.com" },
                 { Icon: MapPin, label: "Location", value: "India · Remote worldwide" },
               ].map(({ Icon, label, value }) => (
                 <div key={label} className="flex items-center gap-4 py-3 border-t border-glass-border">

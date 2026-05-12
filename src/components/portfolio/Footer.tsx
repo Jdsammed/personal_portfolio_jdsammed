@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Heart } from "lucide-react";
+import { Github, Mail, Heart } from "lucide-react";
 
 const links = [
   { id: "home", label: "Home" },
@@ -16,7 +16,7 @@ export function Footer() {
     <footer className="border-t border-glass-border mt-10">
       <div className="container mx-auto px-6 py-10 grid md:grid-cols-3 gap-6 items-center">
         <div className="font-display text-xl font-bold">
-          <span className="text-gradient">YN</span>
+          <span className="text-gradient">JD</span>
           <span className="text-foreground">.</span>
         </div>
 
@@ -33,8 +33,7 @@ export function Footer() {
         <div className="flex md:justify-end justify-center gap-3">
           {[
             { Icon: Github, href: "https://github.com" },
-            { Icon: Linkedin, href: "https://linkedin.com" },
-            { Icon: Mail, href: "mailto:hello@example.com" },
+            { Icon: Mail, href: "mailto:jdthefreelancer1816@gmail.com" },
           ].map(({ Icon, href }, i) => (
             <a
               key={i}

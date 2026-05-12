@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Github, Linkedin, Mail, Sparkles } from "lucide-react";
+import { ArrowRight, Github, Mail, Sparkles } from "lucide-react";
 
 const ROLES = ["Full Stack Developer", "Frontend Specialist", "Freelancer", "UI/UX Enthusiast"];
 
@@ -85,8 +85,7 @@ export function Hero() {
           <div className="flex items-center gap-4 pt-4">
             {[
               { Icon: Github, href: "https://github.com", label: "GitHub" },
-              { Icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-              { Icon: Mail, href: "mailto:hello@example.com", label: "Email" },
+              { Icon: Mail, href: "mailto:jdthefreelancer1816@gmail.com", label: "Email" },
             ].map(({ Icon, href, label }) => (
               <a
                 key={label}
