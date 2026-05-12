@@ -52,7 +52,7 @@ export function Navbar() {
         >
           <button onClick={() => go("home")} className="flex items-center gap-2">
             <span className="font-display text-xl font-bold tracking-tight">
-              <span className="text-gradient">YN</span>
+              <span className="text-gradient">JD</span>
               <span className="text-foreground">.</span>
             </span>
           </button>

@@ -52,7 +52,7 @@ export function Hero() {
           </div>
 
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05]">
-            Hi, I'm <span className="text-gradient">Your Name</span>
+            Hi, I'm <span className="text-gradient">Sammed Duradundi</span>
           </h1>
 
           <div className="text-2xl sm:text-3xl font-display font-medium h-10">
@@ -117,7 +117,7 @@ export function Hero() {
             </div>
             <pre className="p-6 text-sm font-mono leading-relaxed overflow-x-auto">
 {`const developer = {
-  name: "Your Name",
+  name: "Sammed Duradundi",
   role: "Full Stack Dev",
   stack: ["React", "Python", "AWS"],
   passion: "Pixel-perfect UIs ✨",

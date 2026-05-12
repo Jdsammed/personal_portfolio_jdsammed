@@ -1,5 +1,5 @@
 import { GraduationCap, Code2, Globe } from "lucide-react";
-import profile from "@/assets/profile.jpg";
+import profile from "@/assets/profile.jpeg";
 import { Reveal, Stagger, StaggerItem } from "./Reveal";
 import { SectionHeader } from "./SectionHeader";
 

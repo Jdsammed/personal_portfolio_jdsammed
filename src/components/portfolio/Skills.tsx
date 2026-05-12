@@ -29,7 +29,7 @@ const groups = [
     skills: [
       { name: "Git / GitHub", level: 90 },
       { name: "VS Code", level: 95 },
-      { name: "Figma basics", level: 70 },
+
     ],
   },
   {
