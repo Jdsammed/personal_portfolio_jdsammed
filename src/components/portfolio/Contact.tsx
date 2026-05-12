@@ -16,7 +16,7 @@ export function Contact() {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [sent, setSent] = useState(false);
 
-  const onSubmit = (e: React.FormEvent) => {
+  const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const r = schema.safeParse(form);
     if (!r.success) {
@@ -27,10 +27,13 @@ export function Contact() {
     }
     setErrors({});
 
-    const mailtoLink = `mailto:jdthefreelancer1816@gmail.com?subject=${encodeURIComponent(form.subject)}&body=${encodeURIComponent(
-      `Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`
-    )}`;
-    window.location.href = mailtoLink;
+    const response = await fetch("https://formspree.io/f/mzdoolao", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify(form),
+});
+    
+   
 
     setSent(true);
     setTimeout(() => {
