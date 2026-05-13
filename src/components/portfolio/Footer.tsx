@@ -50,9 +50,9 @@ export function Footer() {
       <div className="border-t border-glass-border">
         <div className="container mx-auto px-6 py-5 flex flex-wrap justify-between gap-2 text-xs text-muted-foreground">
           <span className="inline-flex items-center gap-1.5">
-            Designed & Built with <Heart size={12} className="fill-secondary text-secondary" /> by Your Name
+            Designed & Built with <Heart size={12} className="fill-secondary text-secondary" /> by Sammed Duradundi
           </span>
-          <span>© 2025 Your Name. All rights reserved.</span>
+          <span>© 2025 Sammed Duradundi. All rights reserved.</span>
         </div>
       </div>
     </footer>
