@@ -8,58 +8,38 @@ type Cat = "All" | "Frontend" | "Full Stack" | "Freelance";
 const projects: {
   title: string;
   desc: string;
-  tags: string[];
   cat: Exclude<Cat, "All">[];
   gradient: string;
   emoji: string;
+  github?: string;
+  demo?: string;
 }[] = [
   {
     title: "Personal Portfolio Website",
     desc: "Animated, responsive portfolio with custom design system.",
-    tags: ["HTML", "CSS", "JS"],
     cat: ["Frontend"],
     gradient: "from-cyan-500/30 to-purple-500/30",
     emoji: "💼",
+    github: "https://github.com/Jdsammed/personal_portfolio_jdsammed.git",
+    demo: "https://personal-portfolio-jdsammed.jdsammed108.workers.dev/",
   },
   {
     title: "Startup Landing Page",
     desc: "High-converting responsive landing for a SaaS startup.",
-    tags: ["HTML", "CSS"],
     cat: ["Frontend", "Freelance"],
     gradient: "from-purple-500/30 to-pink-500/30",
     emoji: "🚀",
+    github: "https://github.com/Jdsammed/ai-luxe-pulse.git",
+    demo: "https://ai-luxe-pulse-landing-page.jdsammed108.workers.dev/",
   },
   {
-    title: "Python To-Do App",
-    desc: "Task manager with web UI, persistence, and clean API.",
-    tags: ["Python", "Flask", "JS"],
-    cat: ["Full Stack"],
-    gradient: "from-emerald-500/30 to-cyan-500/30",
-    emoji: "✅",
-  },
-  {
-    title: "Business Portfolio",
-    desc: "Custom freelance build for a service business client.",
-    tags: ["React", "Tailwind"],
-    cat: ["Freelance", "Frontend"],
-    gradient: "from-orange-500/30 to-purple-500/30",
-    emoji: "🏢",
-  },
-  {
-    title: "AWS Static Deployment",
-    desc: "S3 + CloudFront pipeline for blazing-fast static sites.",
-    tags: ["AWS", "S3", "CloudFront"],
-    cat: ["Full Stack"],
-    gradient: "from-yellow-500/30 to-cyan-500/30",
-    emoji: "☁️",
-  },
-  {
-    title: "E-commerce Concept",
-    desc: "Modern shop UI with cart, filters, and animations.",
-    tags: ["React", "Tailwind"],
+    title: "Restaurant Website",
+    desc: "Modern restaurant website with menu, animations, and clean UI.",
     cat: ["Frontend"],
     gradient: "from-pink-500/30 to-purple-500/30",
-    emoji: "🛍️",
+    emoji: "🍽️",
+    github: "https://github.com/Jdsammed/resturant-website.git",
+    demo: "https://resturant-website.jdsammed108.workers.dev/",
   },
 ];
 
@@ -118,10 +98,10 @@ export function Projects() {
                   <span className="relative drop-shadow-[0_0_20px_rgba(0,212,255,0.4)]">{p.emoji}</span>
                   <div className="absolute inset-0 bg-background/70 opacity-0 group-hover:opacity-100 transition-opacity grid place-items-center gap-3">
                     <div className="flex gap-3">
-                      <a href="#" className="glass-strong px-4 py-2 rounded-xl text-sm flex items-center gap-2 hover:text-primary">
+                      <a href={p.demo ?? "#"} target="_blank" rel="noreferrer" className="glass-strong px-4 py-2 rounded-xl text-sm flex items-center gap-2 hover:text-primary">
                         <ExternalLink size={14} /> Live Demo
                       </a>
-                      <a href="#" className="glass-strong px-4 py-2 rounded-xl text-sm flex items-center gap-2 hover:text-primary">
+                      <a href={p.github ?? "#"} target="_blank" rel="noreferrer" className="glass-strong px-4 py-2 rounded-xl text-sm flex items-center gap-2 hover:text-primary">
                         <Github size={14} /> GitHub
                       </a>
                     </div>
@@ -129,17 +109,7 @@ export function Projects() {
                 </div>
                 <div className="p-6">
                   <h3 className="font-semibold text-lg mb-1.5">{p.title}</h3>
-                  <p className="text-sm text-muted-foreground mb-4">{p.desc}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {p.tags.map((t) => (
-                      <span
-                        key={t}
-                        className="text-xs px-2.5 py-1 rounded-md glass text-muted-foreground hover:text-primary hover:border-primary/40 transition-colors"
-                      >
-                        {t}
-                      </span>
-                    ))}
-                  </div>
+                  <p className="text-sm text-muted-foreground">{p.desc}</p>
                 </div>
               </motion.article>
             ))}
